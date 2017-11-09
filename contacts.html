@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Artcoupe - Контакты</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#000000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_MpekSK5vGON_uH-FtRRfpo_NuD5dz9w"></script>
+<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="row header__top">
+					<div class="col header__left-block">
+						<div class="header__description">Шкафы купе, стеллажи, кухни и мебель на заказ во Владивостоке</div>
+					</div>
+					<div class="col header__logo">
+						<a href="#" class="logo">
+							<div class="logo__name">ARTCOUPE</div>
+							<div class="logo__description">ВСТРОЕННАЯ МЕБЕЛЬ</div>
+						</a>
+					</div>
+					<div class="col header__right-block">
+						<a href="tel:+74232780008" class="header__tel">+7 (423) 278-00-08</a>
+						<button class="header__call-me btn-clear call-me-btn">Заказать звонок-консультацию</button>
+						<button class="btn-clear header__menu-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container">
+					<nav class="header__nav">
+						<a href="#" class="header__nav-link">Главная</a>
+						<a href="#" class="header__nav-link">Фото работ</a>
+						<a href="#" class="header__nav-link">Качество и гарантия</a>
+						<a href="#" class="header__nav-link">МАТЕРИАЛЫ  И  КОМПЛЕКТУЮЩИЕ</a>
+						<a href="#" class="header__nav-link header__nav-link_blue">Вопросы и ответы</a>
+						<a href="#" class="header__nav-link header__nav-link_blue active">Контакты</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="page-head border border_top">
+			<div class="container">
+				<div class="page-head__header">
+					
+					<div class="title-round title-round_orange title-round_medium">КОНТАКТЫ</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-7 page-head__description">Проконсультироваться и узнать ориентировочную стоимость Вашего проекта Вы можете по телефонам: <span class="text-blue">+ 7 (423) 278-00-08 / + 7 (423) 277-04-51</span></div>
+				</div>
+				
+				<div class="contacts-page-address row no-gutters">
+					<div class="col-md-6 contacts-page-address__address">
+						<h3 class="contacts-page-address__title">Наш адрес:</h3>
+						<p>пр-т 100-летия Владивостоку, 103 <br>
+						(к/т Иллюзион), офис 434, <br>
+						Владивосток</p>
+						<h3 class="contacts-page-address__title">ТЕЛЕФОН:</h3>
+						<p>+7 (423) 278-00-08 <br>
+						+7 (423) 277-04-51</p>
+					</div>
+					<div class="col-md-6 contacts-page-address__map" id="map"></div>
+				</div>
+				
+				<form action="" class="contacts-form">
+					<label for="" class="contacts-form__title">Написать нам: </label>
+					<input class="contacts-form__input" type="email" name="email" placeholder="E-mail">
+					<textarea class="contacts-form__input" name="feedback" id="" rows="10" placeholder="Текст сообщения"></textarea>
+					<input class="contacts-form__submit" name="commit" type="submit" value="отправить">
+				</form>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="row ">
+					<div class="col footer__left-block">
+						<a href="#" class="logo">
+							<div class="logo__name">ARTCOUPE</div>
+							<div class="logo__description logo__description_white">ВСТРОЕННАЯ МЕБЕЛЬ</div>
+						</a>
+					</div>
+					<div class="col footer__center-block">
+						<a href="tel:+74232780008" class="footer__tel">+7 (423) 278-00-08</a>
+						<button class="footer__call-me btn-clear call-me-btn">Заказать звонок-консультацию</button>
+					</div>
+					<div class="col footer__right-block">
+						<a href="#" class="footer__inst-link">
+							<img src="img/inst-logo.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="footer__copyright">
+					<p>Если у Вас на стадии ремонта возникают вопросы относительно встроенной мебели — не ломайте голову, просто позвоните нам и проконсультируйтесь, специалисты компании ARTCOUPE о встроенной мебели знают всё!</p>
+					<p>© 2011-2017. АРТКУПЕ. Встроенная мебель на заказ во Владивостоке.</p>
+				</div>
+			</div>
+		</footer> 
+	</div>
+	
+	<button class="btn-up btn-clear"></button>
+	<script>
+		// Адрес
+		var addr = [43.162585, 131.911581]
+	</script>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<link  href="css/jquery.fancybox.min.css" rel="stylesheet">
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.parallax.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+</html>
