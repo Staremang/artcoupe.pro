@@ -59,30 +59,55 @@ if (typeof(jQuery) !== "undefined") {
 		
 		
 		
-		if (document.documentElement.clientWidth < 960) {
-			document.querySelectorAll('.article-block').forEach(function (item) {
-				if (!item.classList.contains('article-block_no-spoler')) {
-					item.setAttribute('data-spoler', 'close');
-				}
-			})
-			$('.article-block__btn').click(function () {
-				if ($(this).hasClass('article-block_no-spoler')) {
-					return 0;
-				}
-				var block = $(this).parents('.article-block'),
-					tr = block.attr('data-spoler');
-
-				if (tr != 'close') {
-					block.attr('data-spoler', 'close');
-					$(this).html('Развернуть');
-				} else {
-					block.attr('data-spoler', 'open');
-					$(this).html('Свернуть');
-				}
-			})
-		}
+//		if (document.documentElement.clientWidth < 960) {
+//			document.querySelectorAll('.article-block').forEach(function (item) {
+//				if (!item.classList.contains('article-block_no-spoler')) {
+//					item.setAttribute('data-spoler', 'close');
+//				}
+//			})
+//			$('.article-block__btn').click(function () {
+//				if ($(this).hasClass('article-block_no-spoler')) {
+//					return 0;
+//				}
+//				var block = $(this).parents('.article-block'),
+//					tr = block.attr('data-spoler');
+//
+//				if (tr != 'close') {
+//					block.attr('data-spoler', 'close');
+//					$(this).html('Развернуть');
+//				} else {
+//					block.attr('data-spoler', 'open');
+//					$(this).html('Свернуть');
+//				}
+//			})
+//		}
 		
 		if ($().owlCarousel) {
+			if (document.documentElement.clientWidth < 768) {
+				
+				$('.last-works-open__preview-container').addClass('owl-carousel owl-carousel_no-dots owl-theme');
+				$('.last-works-open__preview-container').owlCarousel({
+					loop: true,
+					nav: false,
+//					navText: [ '<img src="img/arrow-left-1.png" alt="left">', '<img src="img/arrow-right-1.png" alt="right">' ],
+					items: 3,
+					autoWidth:true,
+					center:true,
+//					responsive : {
+//						0 : {
+//							items: 1,
+//							margin: 20,
+//						},
+//						768 : {
+//							items: 2,
+//						},
+//						960 : {
+//							items: 3,
+//							margin: 40,
+//						}
+//					}
+				})
+			}
 			$('.last-works-slider').addClass('owl-carousel owl-carousel_no-dots owl-theme');
 			$('.last-works-slider').owlCarousel({
 				loop: true,
