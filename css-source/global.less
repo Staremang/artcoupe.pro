@@ -822,6 +822,10 @@ body {
 		height: 149px + 20;
 		width: 208px + 20;
 		background-color: #ededed;
+		cursor: pointer;
+		&.active {
+			background-color: #ffae00;
+		}
 		img {
 			max-width: 208px;
 			max-height: 149px;
@@ -860,11 +864,20 @@ body {
 .slider-filter-open {
 	border-top: 1px solid #bbb;
 	border-bottom: 1px solid #bbb;
-	padding: 50px 0;
+	padding: 10px 0 30px;
 	background: white;
-    margin-top: -88px;
+    margin-top: -60px;
 	position: relative;
 	z-index: 1;
+	display: none;
+	&.active {
+		display: block;
+	}
+	
+	@media (min-width: @width-md) {
+		padding: 10px 0 50px;
+		margin-top: -88px;
+	}
 	&:before {
 		content: '';
 		position: absolute;
@@ -888,6 +901,17 @@ body {
 		border-color: transparent transparent white transparent;
 		border-width: 0px 13px 13px 13px;
 		border-style: solid;
+	}
+	&__controls {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 14px;
+	}
+	&__btn-close {
+		width: 26px;
+		height: 26px;
+		background: url(../img/btn-close.svg) center no-repeat;
+		background-size: contain;
 	}
 	&__title {
 		font-family: @font-round-medi; // medium
@@ -951,7 +975,7 @@ body {
 		border-radius: 4px;
 		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 		text-align: center;
-		padding: 3px 10px;
+		padding: 3px 8px;
 		background: white;
 		margin-bottom: 20px;
 		color: #bbb;
@@ -973,7 +997,9 @@ body {
 	}
 }
 .last-works-open {
+	margin: 0 -26px;
 	@media (min-width: @width-md) {
+		margin: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -989,6 +1015,16 @@ body {
 		width: 100%;
 		@media (min-width: @width-md) {
 			width: 500px;
+			&:after {
+				content: '';
+				width: 42px;
+				height: 42px;
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				background: url(../img/btn-lupe.svg) center no-repeat;
+				background-size: contain;
+			}
 		}
 		@media (min-width: @width-lg) {
 			width: 750px;
@@ -997,6 +1033,10 @@ body {
 			display: block;
 			max-width: 100%;
 			width: 100%;
+		}
+
+		> a {
+			outline: 0;
 		}
 	}
 	&__preview {
@@ -1016,19 +1056,32 @@ body {
 	}
 	&__nav-prev, &__nav-next {
 		display: none;
+		cursor: pointer;
+		&.disable {
+			opacity: .3;
+		    cursor: not-allowed;
+		}
 		
 		@media (min-width: @width-md) {
 			display: block;
 		}
 	}
 	&__preview-item {
-		
+		display: block;
+		text-decoration: none;
+		&.active {
+			img {
+				border-color: #ffae00;
+			}
+
+		}
 		@media (min-width: @width-md) {
+			cursor: pointer;
 			margin-bottom: 22px;
 			padding: 5px;
 			background: #ececec;
 			
-			&:hover {
+			&:hover, &.active {
 				background: #ffae00;   
 			}
 		}
